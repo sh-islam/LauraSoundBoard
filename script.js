@@ -1,4 +1,4 @@
-//  wait for the DOM to be fully loaded before executing
+// wait for the DOM to be fully loaded before executing
 // allows buttons to be avaialbe in DOM 
 // Event handler: runs after event takes place
 document.addEventListener("DOMContentLoaded", function() {
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function handleKeyPress(event){
       if (event.shiftKey && event.key === 'F1'){
         button1 = document.getElementById("button1");
-        soundFile = `/sounds/${button1.name}.wav`
+        soundFile = `/LauraSoundBoard/sounds/${button1.name}.wav`
         if (button1.getAttribute('playing') === 'false'){playSound(soundFile, button1)}
       }
     }
@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function() {
     
     buttons.forEach(function(button) {
       button.addEventListener("click", function(){
-        let soundFile = `/sounds/${button.name}.wav`;
+        let soundFile = `/LauraSoundBoard/sounds/${button.name}.wav`;
         if (button.getAttribute('name') === 'PartyHorn'){
-          soundFile = `/sounds/${button.name}.mpeg`;
+          soundFile = `/LauraSoundBoard/sounds/${button.name}.mpeg`;
         }
         if (button.getAttribute('playing') === 'false'){playSound(soundFile, button)}
        
