@@ -1,5 +1,6 @@
 //  wait for the DOM to be fully loaded before executing
 // allows buttons to be avaialbe in DOM 
+// Event handler: runs after event takes place
 document.addEventListener("DOMContentLoaded", function() {
     const buttons = document.querySelectorAll("button");
 
@@ -10,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (button1.getAttribute('playing') === 'false'){playSound(soundFile, button1)}
       }
     }
+    // Event listener: listens to event and then triggers handleKeyPress for handling event
     document.addEventListener("keydown", handleKeyPress);
 
     function playSound(soundFile, button) {
